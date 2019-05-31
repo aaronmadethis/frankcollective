@@ -1,3 +1,131 @@
-body{
-    background-color:blue;
+//bootstrap vars
+$grid-columns: 24;
+$grid-gutter-width: 0px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1043px,
+	xl: 1280px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 1000px,
+	xl: 1152px
+);
+
+@import "bootstrap-grid";
+@import "normalize";
+
+body {
+	position: relative;
 }
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba($color: blue, $alpha: 0.1);
+	height: 70px;
+	font-size: 11px;
+	padding: 10px;
+}
+
+.wrapper-hero {
+	position: relative;
+	background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/mastheads/home-8c5ddfb1.svg);
+	background-size: auto 614px;
+	background-repeat: no-repeat;
+	background-position: calc(50% - 287px) calc(100% - 30px);
+	&::before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		content: "";
+		z-index: -1;
+		background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/header_gradient-88482362.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right bottom;
+	}
+}
+
+.wrapper-hero {
+	body.home &{ 
+		background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/mastheads/home-8c5ddfb1.svg); 
+	}
+	body.executives &{ 
+		background-image: url(../img/Hero-Executives-Corrected.svg); 
+		background-size: auto 653px;
+		background-position: calc(50% - 428px) bottom;
+	}
+	body.managers &{
+		background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/mastheads/managers-9b956174.svg); 
+		background-size: auto 653px;
+		background-position: calc(50% + 351px) bottom;
+	}
+	body.engineers &{
+		background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/mastheads/engineers-a5d35436.svg); 
+		background-size: auto 908px;
+		background-position: calc(50% + 358px) bottom;
+	}
+	body.leaders &{
+		background-image: url(https://d341kum51qu34d.cloudfront.net/images/2019-04-redesign/mastheads/product_leaders-937263a1.svg); 
+		background-size: auto 950px;
+		background-position: calc(50% - 309px) bottom;
+	}
+	body.leaders &::before{
+		transform:scaleX(-1);
+	}
+}
+
+.wrapper-hero__headline {
+	min-height: 500px;
+	height:100vh;
+	max-height: 750px;
+	width:100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: rgba($color: #aaaaaa, $alpha: 0.3);
+	.hero-headline {
+		position: absolute;
+		top: 50%;
+		left: 58.333333333%;
+		transform: translate(0, -50%);
+		width: 450px;
+		width: (450 / 1440) * 100%;
+		height: 270px; 
+		background-color: gray;
+		font-size: 10px;
+		color: white;
+		padding: 10px;
+	}
+}
+
+.wrapper-hero__headline .hero-headline {
+	body.executives &{
+		width: 490px;
+		width: (490 / 1440) * 100%;
+		height: 275px;
+	}
+	body.engineers &
+	,body.managers &{
+		width: 470px;
+		width: (470 / 1440) * 100%;
+		height: 275px;
+		left: 8.333333333%;
+	}
+}
+
+
+.wrapper-page{
+	height:1024px;
+	background-color:rgba($color: green, $alpha: 0.1);
+	padding-top:60px;
+	text-align: center;
+}
+
+
