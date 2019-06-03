@@ -32,6 +32,7 @@ nav {
 	height: 70px;
 	font-size: 11px;
 	padding: 10px;
+	z-index: 999;
 }
 
 .wrapper-hero {
@@ -89,7 +90,7 @@ nav {
 	width:100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	background-color: rgba($color: #aaaaaa, $alpha: 0.3);
+	// background-color: rgba($color: #aaaaaa, $alpha: 0.3);
 	.hero-headline {
 		position: absolute;
 		top: 50%;
@@ -130,3 +131,4 @@ nav {
 
 
 @import 'casestudy';
+@import 'product';
