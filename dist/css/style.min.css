@@ -1128,6 +1128,14 @@ body.engineers .wrapper-hero__headline .hero-headline,body.managers .wrapper-her
 .mr-xl-auto,.mx-xl-auto{margin-right:auto !important}
 .mb-xl-auto,.my-xl-auto{margin-bottom:auto !important}
 .ml-xl-auto,.mx-xl-auto{margin-left:auto !important}
+}@media(max-width:1042.98px){body.home .wrapper-hero{background-size:auto 560px}
+body.home .wrapper-hero::before{background-position:right calc(100% - 40px)}
+body.home .wrapper-hero__headline .hero-headline{top:42%;width:41.6666666667%;height:225px;left:50%}
+}@media(max-width:767.98px){body.home nav{height:50px}
+body.home .wrapper-hero{background-size:auto 336px;background-position:calc(0% - 360px) calc(100% - 30px)}
+body.home .wrapper-hero::before{background-position:right calc(100% - 105px)}
+body.home .wrapper-hero__headline{max-height:505px}
+body.home .wrapper-hero__headline .hero-headline{top:88px;width:58.3333333333%;height:225px;left:33.3333333333%;-webkit-transform:translate(0,0);transform:translate(0,0)}
 }@media print{.d-print-none{display:none !important}
 .d-print-inline{display:inline !important}
 .d-print-inline-block{display:inline-block !important}
