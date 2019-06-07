@@ -129,6 +129,62 @@ nav {
 	text-align: center;
 }
 
-
 @import 'casestudy';
 @import 'product';
+
+//RESPONSIVE HOME PAGE HERO
+body.home{
+	nav{
+		@include media-breakpoint-down(sm) {
+			height: 50px;
+		}
+	}
+	.wrapper-hero{
+		@include media-breakpoint-down(md) {
+			background-size: auto 560px;
+			&::before {
+				background-position: right calc(100% - 40px);
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			background-size: auto 336px;
+			background-position: calc(0% - 360px) calc(100% - 30px);
+			&::before {
+				background-position: right calc(100% - 105px);
+			}
+		}
+	}
+	.wrapper-hero__headline {
+		@include media-breakpoint-down(sm) {
+			max-height: 505px;
+		}
+		.hero-headline {
+			@include media-breakpoint-down(md) {
+				top: 42%;
+				width: (10 / 24) * 100%;
+				height: 225px;
+				left: (12 / 24) * 100%;
+			}
+			@include media-breakpoint-down(sm) {
+				top:88px;
+				width: (14 / 24) * 100%;
+				height: 225px;
+				left: (8 / 24) * 100%;
+				transform: translate(0, 0%);
+			}
+		}
+	}
+}
+
+/*
+BOOTSTRAP 4 responsive mixins
+@include media-breakpoint-up(sm) {
+	// Styles
+}
+@include media-breakpoint-down(sm) {
+	// Styles
+}
+@include media-breakpoint-between(sm, md) {
+	// Styles
+}
+*/
