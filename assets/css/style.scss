@@ -127,10 +127,14 @@ nav {
 	background-color:rgba($color: green, $alpha: 0.1);
 	padding-top:60px;
 	text-align: center;
+	&.tall{
+		height:2024px;
+	}
 }
 
 @import 'casestudy';
 @import 'product';
+@import 'scrolljack';
 
 //RESPONSIVE HOME PAGE HERO
 body.home{

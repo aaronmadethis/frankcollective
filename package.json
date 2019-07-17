@@ -41,7 +41,8 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "waypoints": "^4.0.1"
   },
   "scripts": {
     "start": "gulp",
